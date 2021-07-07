@@ -16,5 +16,17 @@ namespace Revrot.Tests
 
             result.Should().Be("");
         }
+
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(0)]
+        public void WhenPassChunkSizeLessOrEqualToZeroThenReturnEmptyString(int sz)
+        {
+            var str = "123";
+            
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be("");
+        }
     }
 }
