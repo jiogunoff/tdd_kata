@@ -22,6 +22,12 @@ namespace Revrot.Tests
                 return new string(str.Reverse().ToArray());
             }
             
+            if (str.Length == sz)
+            {
+                var firstSymbol = str[0];
+                return str.Substring(1, str.Length - 1) + firstSymbol;
+            }
+            
             return str;
         }
     }
