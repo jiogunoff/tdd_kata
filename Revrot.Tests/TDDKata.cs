@@ -15,6 +15,11 @@ namespace Revrot.Tests
             {
                 return string.Empty;
             }
+
+            if (sz == 2)
+            {
+                return new string(str.Reverse().ToArray());
+            }
             
             return str;
         }
