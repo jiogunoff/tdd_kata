@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text;
 
 namespace Revrot.Tests
 {
@@ -27,10 +28,24 @@ namespace Revrot.Tests
                 var firstSymbol = str[0];
                 return str.Substring(1, str.Length - 1) + firstSymbol;
             }
-            
-            
-            
-            return str;
+
+            var sb = new StringBuilder();
+            var chunksCount = str.Length / sz;
+            for (int chunkIdx = 0; chunkIdx < chunksCount; chunkIdx++)
+            {
+                var chunk = str.Substring(chunkIdx + sz * chunkIdx, sz);
+                if (chunk.Select(x => Math.Pow(int.Parse(x.ToString()), 3)).Sum() % 2 == 0)
+                {
+                    sb.Append(new string(chunk.Reverse().ToArray()));
+                }
+                else
+                {
+                    var firstSymbol = chunk[0];
+                    sb.Append(chunk.Substring(1, chunk.Length - 1) + firstSymbol);
+                }
+            }
+
+            return sb.ToString();
         }
     }
 }
