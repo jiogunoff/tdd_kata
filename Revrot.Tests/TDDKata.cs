@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace Revrot.Tests
@@ -16,7 +17,7 @@ namespace Revrot.Tests
                 return string.Empty;
             }
 
-            if (sz == 2)
+            if (str.Select(x => Math.Pow(int.Parse(x.ToString()), 3)).Sum() % 2 == 0)
             {
                 return new string(str.Reverse().ToArray());
             }

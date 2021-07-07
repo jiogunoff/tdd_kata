@@ -69,5 +69,16 @@ namespace Revrot.Tests
 
             result.Should().Be("42");
         }
+        
+        [Fact]
+        public void WhenPassOneChunkWithSize3AndSumOfCubesDivisibleBy2ThenReturnReverseString()
+        {
+            var str = "248";
+            var sz = 3;
+            
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be("842");
+        }
     }
 }
