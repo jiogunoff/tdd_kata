@@ -80,5 +80,15 @@ namespace Revrot.Tests
 
             result.Should().Be("842");
         }
+        [Fact]
+        public void WhenPassOneChunkWithSize3AndSumOfCubesDoesNotDivisibleBy2ThenReturnStringRotatedLeftOnePosition()
+        {
+            var str = "148";
+            var sz = 3;
+            
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be("481");
+        }
     }
 }
