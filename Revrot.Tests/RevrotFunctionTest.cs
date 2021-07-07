@@ -48,5 +48,15 @@ namespace Revrot.Tests
 
             result.Should().Be(str);
         }
+        
+        [Theory]
+        [InlineData("123", 1)]
+        [InlineData("222", 1)]
+        public void WhenPassChunkSize1WithStringAnySymbolsThenReturnThatString(string str, int sz)
+        {
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be(str);
+        }
     }
 }
