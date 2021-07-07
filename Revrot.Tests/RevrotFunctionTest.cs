@@ -7,14 +7,14 @@ namespace Revrot.Tests
     public class RevrotFunctionTest
     {
         [Fact]
-        public void FirstTest()
+        public void WhenPassEmptyStringThenReturnEmptyString()
         {
-            var a = 2;
-            var b = 2;
+            var str = "";
+            var sz = 1;
 
-            var sum = a + b;
+            var result = TDDKata.Revrot(str, sz);
 
-            sum.Should().Be(4);
+            result.Should().Be("");
         }
     }
 }

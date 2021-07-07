@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddKata", "TddKata\TddKata.csproj", "{6359AA97-F4BC-4518-8920-F0428F0469DE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revrot.Tests", "Revrot.Tests\Revrot.Tests.csproj", "{83BD130A-F237-40D3-9F91-6690584B645A}"
 EndProject
 Global
@@ -10,10 +8,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6359AA97-F4BC-4518-8920-F0428F0469DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6359AA97-F4BC-4518-8920-F0428F0469DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6359AA97-F4BC-4518-8920-F0428F0469DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6359AA97-F4BC-4518-8920-F0428F0469DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83BD130A-F237-40D3-9F91-6690584B645A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{83BD130A-F237-40D3-9F91-6690584B645A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83BD130A-F237-40D3-9F91-6690584B645A}.Release|Any CPU.ActiveCfg = Release|Any CPU
