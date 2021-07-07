@@ -28,6 +28,8 @@ namespace Revrot.Tests
                 return str.Substring(1, str.Length - 1) + firstSymbol;
             }
             
+            
+            
             return str;
         }
     }

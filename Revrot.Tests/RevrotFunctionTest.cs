@@ -23,7 +23,7 @@ namespace Revrot.Tests
         public void WhenPassChunkSizeLessOrEqualToZeroThenReturnEmptyString(int sz)
         {
             var str = "123";
-            
+
             var result = TDDKata.Revrot(str, sz);
 
             result.Should().Be("");
@@ -48,7 +48,7 @@ namespace Revrot.Tests
 
             result.Should().Be(str);
         }
-        
+
         [Theory]
         [InlineData("123", 1)]
         [InlineData("222", 1)]
@@ -64,31 +64,43 @@ namespace Revrot.Tests
         {
             var str = "24";
             var sz = 2;
-            
+
             var result = TDDKata.Revrot(str, sz);
 
             result.Should().Be("42");
         }
-        
+
         [Fact]
         public void WhenPassOneChunkWithSize3AndSumOfCubesDivisibleBy2ThenReturnReverseString()
         {
             var str = "248";
             var sz = 3;
-            
+
             var result = TDDKata.Revrot(str, sz);
 
             result.Should().Be("842");
         }
+
         [Fact]
         public void WhenPassOneChunkWithSize3AndSumOfCubesDoesNotDivisibleBy2ThenReturnStringRotatedLeftOnePosition()
         {
             var str = "148";
             var sz = 3;
-            
+
             var result = TDDKata.Revrot(str, sz);
 
             result.Should().Be("481");
+        }
+
+        [Fact]
+        public void WhenPassTwoChunksWithSize3AndFirstChunkSumOfCubesDivisibleBy2AndSecondDoesNotThenReturnCorrectString()
+        {
+            var str = "248148";
+            var sz = 3;
+
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be("842481");
         }
     }
 }
