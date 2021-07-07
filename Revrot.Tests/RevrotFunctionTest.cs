@@ -1,4 +1,3 @@
-using System;
 using FluentAssertions;
 using Xunit;
 
@@ -101,6 +100,17 @@ namespace Revrot.Tests
             var result = TDDKata.Revrot(str, sz);
 
             result.Should().Be("842481");
+        }
+
+        [Fact]
+        public void TestFromKata()
+        {
+            var str = "733049910872815764";
+            var sz = 5;
+
+            var result = TDDKata.Revrot(str, sz);
+
+            result.Should().Be("330479108928157");
         }
     }
 }

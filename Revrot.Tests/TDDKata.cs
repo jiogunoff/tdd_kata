@@ -8,30 +8,9 @@ namespace Revrot.Tests
     {
         public static string Revrot(string str, int sz)
         {
-            if (sz <= 0)
+            if (sz <= 0 || str.Length < sz)
             {
                 return string.Empty;
-            }
-
-            if (str.Length < sz)
-            {
-                return string.Empty;
-            }
-
-            if (sz == 1)
-            {
-                return str;
-            }
-            
-            if (str.Length == sz && str.Select(x => Math.Pow(int.Parse(x.ToString()), 3)).Sum() % 2 == 0)
-            {
-                return new string(str.Reverse().ToArray());
-            }
-            
-            if (str.Length == sz)
-            {
-                var firstSymbol = str[0];
-                return str.Substring(1, str.Length - 1) + firstSymbol;
             }
 
             var sb = new StringBuilder();
@@ -45,8 +24,7 @@ namespace Revrot.Tests
                 }
                 else
                 {
-                    var firstSymbol = chunk[0];
-                    sb.Append(chunk.Substring(1, chunk.Length - 1) + firstSymbol);
+                    sb.Append(chunk.Substring(1, chunk.Length - 1) + chunk[0]);
                 }
             }
 
