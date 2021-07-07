@@ -4,7 +4,17 @@ namespace Revrot.Tests
     {
         public static string Revrot(string str, int sz)
         {
-            return "";
+            if (sz <= 0)
+            {
+                return string.Empty;
+            }
+
+            if (str.Length < sz)
+            {
+                return string.Empty;
+            }
+            
+            return str;
         }
     }
 }
