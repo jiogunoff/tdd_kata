@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Revrot.Tests
 {
     public static class TDDKata
