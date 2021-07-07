@@ -17,7 +17,7 @@ namespace Revrot.Tests
                 return string.Empty;
             }
 
-            if (str.Select(x => Math.Pow(int.Parse(x.ToString()), 3)).Sum() % 2 == 0)
+            if (str.Length == sz && str.Select(x => Math.Pow(int.Parse(x.ToString()), 3)).Sum() % 2 == 0)
             {
                 return new string(str.Reverse().ToArray());
             }
